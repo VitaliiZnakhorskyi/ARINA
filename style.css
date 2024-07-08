@@ -1,0 +1,444 @@
+@font-face {
+	font-family: caveat;
+	src: url(fonts/Caveat-VariableFont_wght.woff2);
+}
+@font-face {
+	font-family: jost;
+	src: url(fonts/Jost-Italic-VariableFont_wght.woff2);
+}
+@font-face {
+	font-family: pacifico;
+	src: url(fonts/Pacifico-Regular.woff2);
+}
+@font-face {
+	font-family: RubikMonoOne;
+	src: url(fonts/RubikMonoOne-Regular.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(133, 2, 83);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background: rgb(133, 2, 83);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.name {
+    display: flex;
+    width: 500px;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    padding: 0px 30px;
+    position: relative;
+}
+.name__a {
+    position: relative;
+	top: 0px;
+	left: 0px;
+    transition: all 1s ease 0s;
+}
+.heard {
+    position: absolute;
+    font-size: 18px;
+    top: -25px;
+    left: -4px;
+    color: rgb(255, 53, 53);
+    transition: all 0.5s ease 0s;
+    text-shadow: 0px 0px 10px rgb(255, 53, 53);
+}
+.name__r {
+    position: relative;
+	top: 0px;
+	left: 0px;
+    transition: all 1s ease 0s;
+}
+.name__i {
+    position: relative;
+	top: 0px;
+	left: 0px;
+    transition: all 1s ease 0s;
+}
+.name__n {
+    position: relative;
+	top: 0px;
+	left: 0px;
+    transition: all 1s ease 0s;
+}
+.name__a-two {
+    position: relative;
+	top: 0px;
+	left: 0px;
+    transition: all 1s ease 0s;
+}
+.button {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0px 5px 0px 5px;
+    border: 1px solid rgb(255, 0, 179);
+    background: rgb(238, 4, 226);
+    box-shadow: 0px 0px 10px rgb(238, 4, 226);
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.button__slide {
+    width: 50px;
+    height: 40px;
+    border: 1px solid rgb(235, 34, 225);
+    border-radius: 30px;
+    background: rgb(255, 191, 191);
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    z-index: 3;
+    transition: all 1s ease 0s;
+}
+.button__text::before {
+    content: 'OFF';
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    font-size: 20px;
+    color: rgb(35, 35, 148);
+}
+.button__text::after {
+    content: 'ON';
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    font-size: 20px;
+    color: rgb(35, 35, 148);
+}
+.text {
+    font-size: 20px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: all 2s ease 0s;
+}
+
+/* active */
+body.active {
+    background-image: url(img/arinaWithDad.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container.active {
+    background: rgba(128, 128, 128, 0.7);
+}
+.heard.active {
+    font-weight: 700;
+    top: -110px;
+    left: -30px;
+    transform: rotate(-20deg);
+    font-size: 100px;
+    transition: all 1s ease 0s;
+    animation: heard 1s linear infinite 1s;
+}
+.name__a.active {
+    font-family: caveat;
+    font-size: 150px;
+    font-weight: 900;
+    left: -30px;
+    color: rgb(255, 192, 203);
+    text-shadow: 0px 0px 10px rgb(255, 192, 203);
+    -webkit-text-stroke: 0.5px red;
+    -webkit-background-clip: text;
+    transform: rotate(-30deg);
+    transition: all 1s ease 0s;
+}
+.name__r.active {
+    font-family: jost;
+    font-weight: 700;
+    top: -50px;
+    left: -20px;
+    color: rgb(0, 255, 255);
+    text-shadow: 0px 0px 10px rgb(0, 255, 255);
+    -webkit-text-stroke: 0.5px;
+    -webkit-background-clip: text;
+    font-size: 150px;
+    transform: rotate(0deg);
+    transition: all 1s ease 0s;
+}
+.name__i.active {
+    font-family: pacifico;
+    font-weight: 700;
+    top: -20px;
+    left: -10px;
+    color: rgb(255, 105, 180);
+    text-shadow: 0px 0px 10px rgb(255, 105, 180);
+    -webkit-text-stroke: 0.5px;
+    -webkit-background-clip: text;
+    font-size: 110px;
+    transform: rotate(20deg);
+    transition: all 1s ease 0s;
+}
+.name__n.active {
+    font-family: RubikMonoOne;
+    font-weight: 700;
+    top: -40px;
+    left: 20px;
+    color: rgb(127, 255, 0);
+    text-shadow: 0px 0px 10px rgb(127, 255, 0);
+    -webkit-text-stroke: 0.5px;
+    -webkit-background-clip: text;
+    font-size: 110px;
+    transform: rotate(-20deg);
+    transition: all 1s ease 0s;
+}
+.name__a-two.active {
+    font-family: caveat;
+    font-weight: 700;
+    top: 0px;
+    left: 15px;
+    color: rgb(255, 255, 0);
+    text-shadow: 0px 0px 10px rgb(255, 255, 0);
+    -webkit-text-stroke: 0.5px;
+    -webkit-background-clip: text;
+    font-size: 120px;
+    transform: rotate(10deg);
+    transition: all 1s ease 0s;
+}
+.button__slide.active {
+    top: 3px;
+    left: 43px;
+    transition: all 1s ease 0s;
+}
+.text.active {
+    opacity: 1;
+    transition: all 2s ease 0s;
+}
+
+@keyframes heard {
+    0% {
+        font-weight: 700;
+        font-size: 90px;
+    }
+    100% {
+        font-weight: 700;
+        font-size: 110px;
+        top: -120px;
+        left: -35px;
+    }
+}
+
+/* media */
+
+@media (max-width: 390px) {
+    .name {
+        display: flex;
+        width: 300px;
+        height: 300px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        padding: 0px 10px;
+        position: relative;
+    }
+    .heard {
+        position: absolute;
+        font-size: 12px;
+        top: -20px;
+        left: -4px;
+        color: red;
+        transition: all 0.5s ease 0s;
+    }
+    .heard.active {
+        position: absolute;
+        font-size: 30px;
+        top: -40px;
+        left: -10px;
+        color: red;
+        transition: all 0.5s ease 0s;
+    }
+    .name__a.active {
+        font-family: caveat;
+        font-size: 60px;
+        font-weight: 900;
+        left: -30px;
+        color: pink;
+        -webkit-text-stroke: 0.5px red;
+        -webkit-background-clip: text;
+        transform: rotate(-30deg);
+        transition: all 1s ease 0s;
+    }
+    .name__r.active {
+        font-family: jost;
+        font-weight: 700;
+        top: -40px;
+        left: -20px;
+        color: aqua;
+        -webkit-text-stroke: 0.5px;
+        -webkit-background-clip: text;
+        font-size: 60px;
+        transform: rotate(0deg);
+        transition: all 1s ease 0s;
+    }
+    .name__i.active {
+        font-family: pacifico;
+        font-weight: 700;
+        top: -20px;
+        left: -10px;
+        color: hotpink;
+        -webkit-text-stroke: 0.5px;
+        -webkit-background-clip: text;
+        font-size: 60px;
+        transform: rotate(20deg);
+        transition: all 1s ease 0s;
+    }
+    .name__n.active {
+        font-family: RubikMonoOne;
+        font-weight: 700;
+        top: -40px;
+        left: 10px;
+        color: chartreuse;
+        -webkit-text-stroke: 0.5px;
+        -webkit-background-clip: text;
+        font-size: 60px;
+        transform: rotate(-20deg);
+        transition: all 1s ease 0s;
+    }
+    .name__a-two.active {
+        font-family: caveat;
+        font-weight: 700;
+        top: 0px;
+        left: 5px;
+        color: yellow;
+        -webkit-text-stroke: 0.5px;
+        -webkit-background-clip: text;
+        font-size: 60px;
+        transform: rotate(10deg);
+        transition: all 1s ease 0s;
+    }
+    @keyframes heard {
+        0% {
+            font-weight: 700;
+            font-size: 30px;
+        }
+        100% {
+            font-weight: 700;
+            font-size: 40px;
+            top: -50px;
+            left: -10px;
+        }
+    }
+}
+@media (max-width: 540px) {
+    .name {
+        display: flex;
+        width: 350px;
+        height: 300px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        padding: 0px 10px;
+        position: relative;
+    }
+    .heard {
+        position: absolute;
+        font-size: 12px;
+        top: -20px;
+        left: -4px;
+        color: red;
+        transition: all 0.5s ease 0s;
+    }
+    .heard.active {
+        position: absolute;
+        font-size: 30px;
+        top: -40px;
+        left: 20px;
+        transform: rotate(20deg);
+        color: red;
+        transition: all 0.5s ease 0s;
+    }
+    .name__a.active {
+        font-family: caveat;
+        font-size: 60px;
+        font-weight: 900;
+        left: -10px;
+        color: pink;
+        -webkit-text-stroke: 0.5px red;
+        -webkit-background-clip: text;
+        transform: rotate(-30deg);
+        transition: all 1s ease 0s;
+    }
+    .name__r.active {
+        font-family: jost;
+        font-weight: 700;
+        top: -40px;
+        left: -10px;
+        color: aqua;
+        -webkit-text-stroke: 0.5px;
+        -webkit-background-clip: text;
+        font-size: 60px;
+        transform: rotate(0deg);
+        transition: all 1s ease 0s;
+    }
+    .name__i.active {
+        font-family: pacifico;
+        font-weight: 700;
+        top: -30px;
+        left: 0px;
+        color: hotpink;
+        -webkit-text-stroke: 0.5px;
+        -webkit-background-clip: text;
+        font-size: 60px;
+        transform: rotate(-20deg);
+        transition: all 1s ease 0s;
+    }
+    .name__n.active {
+        font-family: RubikMonoOne;
+        font-weight: 700;
+        top: -40px;
+        left: 10px;
+        color: chartreuse;
+        -webkit-text-stroke: 0.5px;
+        -webkit-background-clip: text;
+        font-size: 60px;
+        transform: rotate(-20deg);
+        transition: all 1s ease 0s;
+    }
+    .name__a-two.active {
+        font-family: caveat;
+        font-weight: 700;
+        top: 0px;
+        left: -15px;
+        color: yellow;
+        -webkit-text-stroke: 0.5px;
+        -webkit-background-clip: text;
+        font-size: 60px;
+        transform: rotate(10deg);
+        transition: all 1s ease 0s;
+    }
+    @keyframes heard {
+        0% {
+            font-weight: 700;
+            font-size: 30px;
+        }
+        100% {
+            font-weight: 700;
+            font-size: 40px;
+            top: -50px;
+            left: 10px;
+        }
+    }
+}
